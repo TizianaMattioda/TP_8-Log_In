@@ -12,8 +12,13 @@ const normalGif = {
 export default function App() {
   return (
     <View style={styles.container}>
-      <Image source={normalGif} style={styles.normalImageImage} />
-      <Image source={profilePhoto} style={styles.profileImage} />
+      <View style={styles.header}>
+        <Text style={styles.title}>Login App (Hyacine)</Text>
+      </View>
+      
+      <Image source={normalGif} style={styles.banner} />
+      <Image source={profilePhoto} style={styles.avatar} />
+      
       <Text>Open up App.js to start working on your app!</Text>
       <StatusBar style="auto" />
     </View>
@@ -28,16 +33,35 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 
-  profileImage: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-    marginBottom: 15
+  header: {
+    width: '100%',
+    backgroundColor: '#fee4e8',
+    paddingTop: 40,
+    paddingBottom: 10,
+    alignItems: 'center',
   },
 
-  normalImage: {
-    width: 400,
-    height: 300
+  title: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 16,
+  },
+
+  banner: {
+    width: 300,
+    height: 100,
+    resizeMode: 'contain',
+    marginTop: 20,
+  },
+
+  avatar: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    marginTop: -40,
+    borderWidth: 3,
+    borderColor: '#fff',
+    backgroundColor: '#eee',
   },
 
 });
