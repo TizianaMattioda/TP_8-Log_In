@@ -44,19 +44,19 @@ const styles = StyleSheet.create({
   title: {
     color: '#fff',
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: 19,
   },
 
   banner: {
     width: 300,
-    height: 100,
+    height: 200,
     resizeMode: 'contain',
     marginTop: 20,
   },
 
   avatar: {
-    width: 80,
-    height: 80,
+    width: 90,
+    height: 90,
     borderRadius: 40,
     marginTop: -40,
     borderWidth: 3,
