@@ -15,14 +15,16 @@ export default function App() {
   
 
   return (
+    <SafeAreaView style={styles.view}>
+      
+      <View style={styles.header}>
+        <Text style={styles.title}>Login App (Hyacine)</Text>
+      </View>
+
     <View style={styles.container}>
         <StatusBar
           backgroundColor="#61dafb"
         />
-
-      <View style={styles.header}>
-        <Text style={styles.title}>Login App (Hyacine)</Text>
-      </View>
       
       <Image source={normalGif} style={styles.banner} />
       <Image source={profilePhoto} style={styles.avatar} />
@@ -51,23 +53,32 @@ export default function App() {
 
       <StatusBar style="auto" />
     </View>
+
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  view: {
+    flex: 1
+  },
+  
   container: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    height: 200
   },
 
   header: {
     width: '100%',
     backgroundColor: '#fee4e8',
-    paddingTop: 40,
+    paddingTop: 50,
     paddingBottom: 10,
     alignItems: 'center',
+    justifyContent: 'flex-start'
+
   },
 
   title: {
