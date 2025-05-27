@@ -25,31 +25,33 @@ export default function App() {
         <StatusBar
           backgroundColor="#61dafb"
         />
-      
-      <Image source={normalGif} style={styles.banner} />
-      <Image source={profilePhoto} style={styles.avatar} />
 
-      <TextInput
-          style={styles.input}
-          onChangeText={onChangeEmail}
-          placeholder="a@b.com"
-          value={email}
+      <View style={styles.form}>
+        <Image source={normalGif} style={styles.banner} />
+        <Image source={profilePhoto} style={styles.avatar} />
+
+        <TextInput
+            style={styles.input}
+            onChangeText={onChangeEmail}
+            placeholder="a@b.com"
+            value={email}
+          />
+        <TextInput
+            style={styles.input}
+            onChangeText={onChangePassword}
+            placeholder ="password"
+            value={password}
         />
-      <TextInput
-          style={styles.input}
-          onChangeText={onChangePassword}
-          placeholder ="password"
-          value={password}
-      />
       
-      <Button style={styles.boton}
+        <Button style={styles.boton}
           title="Ingresar!"
           color= "#85dcf3"
           onPress={() => Alert.alert('Witness, the will of humanity!')}
         />
       
-      <Text style={styles.texto}>¿Olvidaste la contraseña?</Text>
-      <Text style={styles.texto}>Crear cuenta</Text>
+        <Text style={styles.texto}>¿Olvidaste la contraseña?</Text>
+        <Text style={styles.texto}>Crear cuenta</Text>
+      </View>
 
       <StatusBar style="auto" />
     </View>
@@ -62,13 +64,24 @@ const styles = StyleSheet.create({
   view: {
     flex: 1
   },
-  
+  form:{
+    border: '3px solid #dd3087',
+    borderRadius: 32,
+    boxShadow:  '5px 5px 5px 4px rgba(0, 0, 0, 0.2)',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderStyle: 'inset',
+    margin: '16px',
+    padding: '16px',
+    backgroundColor:'#fff'
+  },
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    height: 'auto',
     alignItems: 'center',
     justifyContent: 'center',
-    height: 200
+
   },
 
   header: {
