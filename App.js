@@ -65,12 +65,8 @@ const styles = StyleSheet.create({
     flex: 1
   },
   form:{
-    border: '3px solid #dd3087',
-    borderRadius: 32,
-    boxShadow:  '5px 5px 5px 4px rgba(0, 0, 0, 0.2)',
     alignItems: 'center',
     justifyContent: 'center',
-    borderStyle: 'inset',
     margin: '16px',
     padding: '16px',
     backgroundColor:'#fff'
